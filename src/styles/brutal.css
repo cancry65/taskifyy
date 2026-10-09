@@ -1,0 +1,76 @@
+/* Shared neo-brutalist UI pieces used by several components */
+
+.btn-brutal {
+  border: 3px solid var(--border-color);
+  padding: 0.8rem 1.5rem;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 5px 5px 0px var(--shadow-color);
+}
+.btn-brutal.primary { background: var(--accent-primary); color: var(--accent-text); }
+.btn-brutal.secondary { background: var(--bg-card); color: var(--text-main); }
+.btn-brutal.btn-sm { padding: 0.4rem 0.8rem; font-size: 0.85rem; box-shadow: 3px 3px 0px var(--shadow-color); }
+
+.dash-card {
+  border: 4px solid var(--border-color);
+  padding: 1.5rem;
+  box-shadow: 6px 6px 0px var(--shadow-color);
+  background: var(--bg-card);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.card-header h2 { font-size: 1.2rem; font-weight: 800; }
+
+.tag {
+  background: var(--accent-primary);
+  color: var(--accent-text);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-family: 'Space Mono', monospace;
+}
+.tag.highlight { background: var(--bg-card); color: var(--text-main); border: 2px solid var(--border-color); }
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-main);
+}
+
+/* ---------- Game shell (Flappy + Tetris) ---------- */
+.game-card { max-width: 500px; margin: 0 auto; }
+.canvas-wrapper { position: relative; width: 100%; display: flex; justify-content: center; margin-bottom: 1.5rem; }
+.canvas-wrapper canvas {
+  border: 4px solid var(--border-color);
+  box-shadow: 5px 5px 0px var(--shadow-color);
+  background: var(--bg-main);
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 4px solid var(--border-color);
+  color: #ffffff;
+}
+.game-over-box { text-align: center; }
+.game-over-box p { font-family: 'Space Mono', monospace; font-weight: 700; margin-top: 0.5rem; }
+.controls-hint { font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; text-align: center; }

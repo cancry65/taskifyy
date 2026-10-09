@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================== THEME VARIABLES ENGINE ==================== */
+.theme-mono {
+  --bg-main: #ffffff;
+  --text-main: #000000;
+  --border-color: #000000;
+  --shadow-color: #000000;
+  --bg-card: #ffffff;
+  --bg-card-alt: #e5e5e5;
+  --accent-primary: #000000;
+  --accent-text: #ffffff;
+  --accent-secondary: #666666;
+}
+
+.theme-dark {
+  --bg-main: #121212;
+  --text-main: #ffffff;
+  --border-color: #ffffff;
+  --shadow-color: #000000;
+  --bg-card: #1e1e1e;
+  --bg-card-alt: #2c2c2c;
+  --accent-primary: #ffffff;
+  --accent-text: #000000;
+  --accent-secondary: #888888;
+}
+
+.theme-cyber {
+  --bg-main: #0d0221;
+  --text-main: #00f3ff;
+  --border-color: #00f3ff;
+  --shadow-color: #ff0055;
+  --bg-card: #150535;
+  --bg-card-alt: #260a59;
+  --accent-primary: #ff0055;
+  --accent-text: #ffe600;
+  --accent-secondary: #00ff66;
+}
+
+.app-root {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Vue <transition name="fade"> */
+.fade-enter-active, .fade-leave-active { transition: opacity 0.4s ease; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
